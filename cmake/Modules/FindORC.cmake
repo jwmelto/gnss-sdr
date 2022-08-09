@@ -17,7 +17,7 @@ if(NOT PKG_CONFIG_FOUND)
     include(FindPkgConfig)
 endif()
 
-pkg_check_modules(PC_ORC "orc-0.4 > 0.4.22")
+pkg_search_module(PC_ORC "orc > 0.4.22" "orc-0.4 > 0.4.22")
 
 if(NOT ORC_ROOT)
     set(ORC_ROOT_USER_PROVIDED /usr/local)
